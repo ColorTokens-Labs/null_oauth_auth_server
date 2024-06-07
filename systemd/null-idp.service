@@ -1,0 +1,17 @@
+[Unit]
+Description=Gunicorn for Null IDP
+After=network.target
+
+[Service]
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/home/ubuntu/null-idp
+Environment="PATH=/home/ubuntu/null-idp/.venv/bin"
+ExecStart=/home/ubuntu/null-idp/.venv/bin/gunicorn -c /home/ubuntu/null-idp/gunicorn.conf.py
+ExecReload=/bin/kill -s HUP $MAINPID
+KillMode=mixed
+TimeoutStopSec=5
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
