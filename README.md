@@ -7,7 +7,7 @@ to test and demonstrate single-sign-on for the Xshield portal without requiring 
 
 The instructions below are for deployment on a stock Ubuntu 22.04 server, with updates applied.
 
-Clone tnis repo to /home/ubuntu/null-idp
+Clone this repo to /home/ubuntu/null-idp
 
     git clone https://github.com/ColorTokens-Labs/null_oauth_server.git /home/ubuntu/null-idp
     cd /home/ubuntu/null-idp
